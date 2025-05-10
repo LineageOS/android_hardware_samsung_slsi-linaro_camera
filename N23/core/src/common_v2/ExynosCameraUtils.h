@@ -431,8 +431,8 @@ bool checkValidateRect(const ExynosRect &rect);
 int32_t getDumpImagePropertyConfig(void);
 void setDumpImagePropertyConfig(int32_t val);
 status_t isPipeNeedImageDump(int32_t pipeId);
-void setPropertyConfig(int32_t val, char prop_str[]);
-int32_t getPropertyConfig(char prop_str[]);
+void setPropertyConfig(int32_t val, const char* prop_str);
+int32_t getPropertyConfig(const char* prop_str);
 
 /* [CameraId]_[FramcCount]_[PIPE]_[PIPE_NAME]_[Fmt-]_[PCnt-]_[Meta-]_[WxH]_[YYYYMMDD]_[HHMMSS] */
 #define DEBUG_DUMP_IMAGE_NAME "%sCAM%d_F%d_%s_PIPE-%d_%s_Fmt-%s_PCnt-%d_Meta-%d_%dx%d_%02d%02d%02d_%02d%02d%02d"

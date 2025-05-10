@@ -3338,18 +3338,16 @@ void setPreviewProperty(bool on)
 }
 
 #ifdef DEBUG_DUMP_IMAGE
-void setPropertyConfig(int32_t val, char prop_str[])
+void setPropertyConfig(int32_t val, const char* prop_str)
 {
     int ret = 0;
-
-
     char propertyValue[PROPERTY_VALUE_MAX] = {0};
 
     if (val >= 0)
         snprintf(propertyValue, sizeof(propertyValue), "%d", val);
 
     ALOGD("(%s[%d] %s : %s[val] = %d)", __FUNCTION__, __LINE__, prop_str, propertyValue, val);
-    ret = property_set(prop_str, (const char *)propertyValue);
+    ret = property_set(prop_str, propertyValue);
     if (ret < 0) {
         ALOGE("(%s[%d]) ERR(%s):Failed to set : %s. ret %d",
                 __FUNCTION__, __LINE__, propertyValue, ret, prop_str);
@@ -3358,7 +3356,7 @@ void setPropertyConfig(int32_t val, char prop_str[])
     return;
 }
 
-int32_t getPropertyConfig(char prop_str[])
+int32_t getPropertyConfig(const char* prop_str)
 {
     int32_t config = -1;
 
