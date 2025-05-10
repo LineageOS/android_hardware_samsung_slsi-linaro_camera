@@ -22,6 +22,8 @@
  *
  */
 
+#define EXYNOS9610
+
 #ifdef MOT_9609_SENSORS_KANE
 #include "ExynosCameraConfig_kane.h"
 #else

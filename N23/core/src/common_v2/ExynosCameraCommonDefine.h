@@ -236,7 +236,11 @@
 /* 50 ~  : Single Hidden ID Section */
 #define CAMERA_SERVICE_ID_REAR_2                2
 #define CAMERA_SERVICE_ID_FRONT_2               51
+#ifdef EXYNOS9610
 #define CAMERA_SERVICE_ID_REAR_3                4
+#else
+#define CAMERA_SERVICE_ID_REAR_3                52
+#endif
 #define CAMERA_SERVICE_ID_FRONT_3               53
 #define CAMERA_SERVICE_ID_REAR_4                54
 #define CAMERA_SERVICE_ID_FRONT_4               55
