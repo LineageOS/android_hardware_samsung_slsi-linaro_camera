@@ -206,16 +206,16 @@ cc_library_shared {
         "libdl",
         "libexynosgraphicbuffer",
     ] + select(soong_config_variable("exynos_camera", "uses_slsi_plugin"), {
-        "true": [ "libexynoscamera_plugin" ],
+        true: [ "libexynoscamera_plugin" ],
         default: [],
     }) + select(soong_config_variable("exynos_camera", "uses_sensor_listener"), {
-        "true": [
+        true: [
             "libhardware",
             "libsensorndkbridge",
         ],
         default: [],
     }) + select(soong_config_variable("exynos_camera", "use_giant_mscl"), {
-        "true": [ "libgiantmscl" ],
+        true: [ "libgiantmscl" ],
         default: [],
     }),
 
