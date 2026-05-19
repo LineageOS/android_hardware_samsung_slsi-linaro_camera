@@ -850,7 +850,7 @@ status_t ExynosCameraConfigurations::setFallbackOn(enum DUAL_OPERATION_MODE mode
         return INVALID_OPERATION;
     }
 
-    bool valid = isValidDualOperationMode(mode, sensorId) &
+    bool valid = isValidDualOperationMode(mode, sensorId) &&
                         isValidDualOperationMode(mode, reprocessingSensorId);
     if (!valid) {
         CLOGE("Invalid mode(%d), sensor(%d)!!", mode, sensorId);
