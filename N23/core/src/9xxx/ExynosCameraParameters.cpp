@@ -66,8 +66,6 @@ ExynosCameraParameters::ExynosCameraParameters(cameraId_Info *camIdInfo,
 
     memset(m_width, 0, sizeof(m_width));
     memset(m_height, 0, sizeof(m_height));
-    if (HW_INFO_MODE_MAX > 0)
-        memset(m_mode, 0, sizeof(m_mode));
     memset(m_hwYuvWidth, 0, sizeof(m_hwYuvWidth));
     memset(m_hwYuvHeight, 0, sizeof(m_hwYuvHeight));
     m_hwYuvInputWidth = 0;
